@@ -33,7 +33,7 @@ body {
 }
 
 .app {
-  max-width: 760px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 24px 16px 48px;
 }
@@ -291,6 +291,7 @@ progress::-moz-progress-bar {
 
 .sprite-list {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
   margin: 0;
   padding: 0;
@@ -299,6 +300,7 @@ progress::-moz-progress-bar {
 
 .sprite {
   display: grid;
+  min-width: 0;
   gap: 12px;
   padding: 12px 14px;
   background: var(--surface);
@@ -616,6 +618,12 @@ progress::-moz-progress-bar {
 
 [hidden] {
   display: none !important;
+}
+
+@media (max-width: 680px) {
+  .sprite-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 520px) {
