@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprite Tracker</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <div>
+        <h1>Sprite Tracker</h1>
+        <p id="season-label" class="app__subtitle"></p>
+      </div>
+      <div class="save">
+        <button id="save-button" type="button" class="button button--primary">Save to folder</button>
+        <p id="save-status" class="save__status" role="status" aria-live="polite"></p>
+      </div>
+    </header>
+
+    <section class="profiles" aria-label="Player profiles">
+      <label class="profiles__selector">
+        <span>Profile</span>
+        <select id="profile-select" aria-label="Active profile"></select>
+      </label>
+      <label class="profiles__name">
+        <span>Profile name</span>
+        <input id="profile-name" type="text" maxlength="30" placeholder="Enter a name" autocomplete="off">
+      </label>
+      <button id="add-profile-button" type="button" class="button">Add profile</button>
+      <button id="rename-profile-button" type="button" class="button">Rename</button>
+      <button id="delete-profile-button" type="button" class="button button--danger">Delete profile</button>
+      <p id="profile-error" class="form-error" role="alert" hidden></p>
+    </section>
+
+    <p id="celebration" class="celebration" role="status" aria-live="polite" hidden></p>
+
+    <div id="file-notice" class="notice notice--info" role="alert" hidden>
+      <p>
+        The save file in this folder is newer than the progress stored in this browser.
+        Loading it replaces the progress in this browser.
+      </p>
+      <div class="notice__actions">
+        <button id="file-notice-load" type="button" class="button button--primary">Load save file</button>
+        <button id="file-notice-keep" type="button" class="button">Keep browser progress</button>
+      </div>
+    </div>
+
+    <section class="progress" aria-label="Overall progress">
+      <div class="progress__item">
+        <div class="progress__label">
+          <label for="found-bar">Found</label>
+          <span id="found-count"></span>
+        </div>
+        <progress id="found-bar" max="1" value="0"></progress>
+      </div>
+      <div class="progress__item">
+        <div class="progress__label">
+          <label for="mastered-bar">Mastered</label>
+          <span id="mastered-count"></span>
+        </div>
+        <progress id="mastered-bar" class="progress--mastered" max="1" value="0"></progress>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="Filters">
+      <div class="filters" role="group" aria-label="Filter by status">
+        <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter" data-filter="not-found" aria-pressed="false">Not found yet</button>
+        <button type="button" class="filter" data-filter="not-mastered" aria-pressed="false">Not mastered yet</button>
+        <button type="button" class="filter" data-filter="mastered" aria-pressed="false">Mastered</button>
+        <button type="button" class="filter" data-filter="recent" aria-pressed="false">Recently updated</button>
+        <button type="button" class="filter" data-filter="highlighted" aria-pressed="false">Highlighted</button>
+      </div>
+      <input id="search" class="search" type="search" placeholder="Search sprites..." aria-label="Search sprites" autocomplete="off">
+    </section>
+
+    <p id="storage-warning" class="notice" role="alert" hidden>
+      Your browser blocked saving, so progress will be lost when you close this tab.
+    </p>
+
+    <ul id="sprite-list" class="sprite-list"></ul>
+    <p id="empty-state" class="empty" hidden>No sprites match this filter.</p>
+
+    <details class="add-sprite">
+      <summary>Add a sprite</summary>
+      <form id="add-form" class="add-form" novalidate>
+        <label class="field">
+          <span>Name</span>
+          <input id="add-name" type="text" maxlength="40" required autocomplete="off">
+        </label>
+        <label class="field">
+          <span>Rarity</span>
+          <select id="add-rarity"></select>
+        </label>
+        <button type="submit" class="button button--primary">Add</button>
+        <p id="add-error" class="form-error" role="alert" hidden></p>
+      </form>
+    </details>
+
+    <footer class="app__footer">
+      <p class="hint">
+        Mastering a variant also marks it as found. Unchecking "Found" removes its mastery.
+        Counts include every variant of every sprite.
+        Sprite data comes from community guides and can be incomplete, so add anything that is missing.
+      </p>
+      <button id="reset-button" type="button" class="button button--danger">Reset this profile's progress</button>
+    </footer>
+  </main>
+
+  <!-- Classic scripts (no ES modules) so the page also works when opened via file://. Order matters. -->
+  <script src="js/data/sprites.js"></script>
+  <script src="js/data/images.js"></script>
+  <script src="saves/progress.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/fileSave.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
