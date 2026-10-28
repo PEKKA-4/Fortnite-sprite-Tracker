@@ -173,11 +173,6 @@
       info.append(source);
     }
 
-    if (sprite.generalLevelingTip) {
-      info.append(
-        createTip(sprite.generalLevelingTip.text, sprite.generalLevelingTip.sources, "General leveling tip")
-      );
-    }
     if (sprite.levelingTip) {
       info.append(createTip(sprite.levelingTip.text, sprite.levelingTip.sources, "Sprite tip"));
     }

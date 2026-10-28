@@ -256,7 +256,6 @@
         name: sprite.name,
         rarity: sprite.rarity,
         source: sprite.source,
-        generalLevelingTip: sprite.levelingTip && sprite.levelingTip.exclusive ? null : app.DEFAULT_LEVELING_TIP,
         levelingTip: sprite.levelingTip || null,
         iconUrl: app.getIconUrl(sprite.id, "base"),
         custom: customSprites.some((custom) => custom.id === sprite.id),

@@ -15,8 +15,7 @@ To share your progress, or to keep a backup in the project folder, use **Save to
 
 - Every sprite lists all of its variants (Base, Gold, Cheat Master, ...), 162 in total this season, each with its own **Found** and **Mastered** checkbox
 - Mastering a variant also marks it as found. Un-finding a variant removes its mastery.
-- Every sprite shows linked leveling guidance; sprite-specific notes appear where reliable advice is available. XP figures are guide estimates,
-  not official guarantees, and no universal 3x kill multiplier was verified.
+- Sprite-specific leveling tips with source links appear where reliable advice is available.
 - Create named player profiles to keep progress separate on this device.
 - Click a sprite card or its star to highlight it, then use the **Highlighted** filter to find it again.
 - **Recently updated** sorts sprites by the latest Found or Mastered change in the active profile.
@@ -89,7 +88,6 @@ and may be incomplete or change with patches (the sprite count was 27 at v42.40)
 - Variants per sprite: https://fortnite.gg/sprites
 - Sprite list and variants: https://accountshark.net/fortnite-sprite-checklist
 - Count and ability data: https://spritechecklist.org/all-sprites/
-- General leveling XP estimates: https://www.altchar.com/guides/fortnite-how-to-level-up-your-sprites-faster-aKvE31y3MxHL
 - Quack's shared XP effect: https://communities.epicgames.com/thread/v41-30-act-iii-battle-royale-update-notes/LMZJ
 - Crown Sprite leveling: https://www.destructoid.com/how-to-get-and-level-up-a-crown-sprite-in-fortnite-chapter-7-season-4/
 - Klombo Sprite leveling: https://www.destructoid.com/how-to-get-klombo-sprite-in-fortnite-chapter-7-season-4/

@@ -37,18 +37,6 @@
       },
     ],
   };
-  app.DEFAULT_LEVELING_TIP = {
-    text:
-      "Carry this Sprite while playing. A current guide reports 300 XP per elimination and 100 XP per extraction in normal lobbies; " +
-      "that is 3x the extraction reward, not a confirmed universal 3x kill multiplier. Values may change.",
-    sources: [
-      {
-        label: "AltChar XP guide",
-        url: "https://www.altchar.com/guides/fortnite-how-to-level-up-your-sprites-faster-aKvE31y3MxHL",
-      },
-    ],
-  };
-
   // `source` is null when the guides did not name a specific way to get the sprite.
   app.SPRITES = [
     // Rare
